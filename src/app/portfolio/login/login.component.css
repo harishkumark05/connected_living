@@ -1,0 +1,51 @@
+
+/* loading-spinner.component.css */
+.spinner-border {
+  width: 3rem;
+  height: 3rem;
+  border-width: 0.25em;
+}
+.btn{
+  width: 100px;
+  margin: auto;
+}
+h1{
+  color: var(--iconhover);
+}
+
+.text-muted1{
+          --bs-text-opacity: 1;
+  color: var(--iconhover);
+}
+.form-control{
+border-color: #3164478f;
+}
+.form-control:focus{
+          border-color: #31644754;
+        box-shadow: 0 0 0 .14rem #31644754;
+}
+/* Default button styles */
+.btn-custom {
+  background-color: var(--iconhover);
+  color: white;
+  border: none; /* Ensure no default borders interfere */
+}
+
+/* Hover state */
+.btn-custom:hover {
+  color: white;
+  background-color: #316447db;
+}
+
+/* Focus state with pink box-shadow */
+.btn-custom:focus {
+  outline: none; /* Removes the default outline */
+  box-shadow: 0 0 0 3px var(--iconhover); /* Adds a clear pink box-shadow */
+  border: none; /* Keep border styles consistent */
+}
+
+/* Active state (optional) */
+.btn-custom:active {
+  background-color: #244c3b;
+  color: white;
+}

@@ -1,0 +1,106 @@
+
+*--------------------------------------------------------------
+# About
+--------------------------------------------------------------*/
+/*.about .content h3 {
+  font-weight: 700;
+  font-size: 26px;
+  color: #728394;
+}
+*/
+.about .content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.about .content ul li {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.about .content ul strong {
+  margin-right: 10px;
+}
+
+.about .content ul i {
+  font-size: 16px;
+  margin-right: 5px;
+  color: #0563bb;
+  line-height: 0;
+}
+
+.about .content p:last-child {
+  margin-bottom: 0;
+}
+
+.about-p{
+  color: #242424;
+  font-size: 14px;
+/*  font-family: cursive;*/
+}
+.heading-3{
+  color:var(--bs-pink);
+  font-size: 16px;
+  font-weight: 600;
+/*  font-family: cursive;*/
+  
+}
+.card-body{
+  background-color: #fff;
+  border-radius:5px;
+  text-align: center;
+  height: 200px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, .14), 0 0 2px rgba(0, 0, 0, .12);
+}
+.about-mail{
+  overflow-wrap: break-word;
+}
+.about-card-head{
+          font-weight: 600;
+        color: var(--bs-info-text-emphasis);
+/*        font-family: cursive;*/
+}
+.text-muted{
+  color: #242424 !important;
+}
+hr{
+  color: var(--darkGrayBlue);
+}
+i{
+  border-radius:50px;
+  background-color: var(--bs-info-text-emphasis);
+  padding: 15px;
+  color:var(--bs-success-border-subtle) ;
+}
+.text-muted{
+/*  font-family: cursive;*/
+  line-height: 1.2;
+
+}
+/* Keyframe for full flip animation */
+@keyframes full-flip {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+.flip-hover{
+    transition: transform 0.5s ease-in-out; /* Smooth transition */
+  transform-style: preserve-3d;
+}
+.flip-hover:hover {
+   animation: full-flip 3s ease-in-out;
+}
+.blinking {
+            animation: blink-animation 1s steps(2, start) infinite;
+        }
+
+        @keyframes blink-animation {
+            to {
+                visibility: hidden;
+            }
+        }

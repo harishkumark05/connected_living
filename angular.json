@@ -25,9 +25,18 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "node_modules/aos/dist/aos.css",
+              "src/styles.css",
+               "node_modules/bootstrap/dist/css/bootstrap.min.css",
+               "./node_modules/@fortawesome/fontawesome-free/css/all.min.css"
+                      ],
+            "scripts": [
+              "node_modules/aos/dist/aos.js",
+               "node_modules/jquery/dist/jquery.min.js",
+    "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+           
             ],
-            "scripts": []
+            "allowedCommonJsDependencies": ["rfdc", "aos"]
           },
           "configurations": {
             "production": {
@@ -94,5 +103,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }

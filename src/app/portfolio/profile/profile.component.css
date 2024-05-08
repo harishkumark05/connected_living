@@ -1,0 +1,135 @@
+
+
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+#hero {
+  margin-top: -65px;
+  width: 100%;
+  height: 100vh;
+  background: url("../../../assets/hero.jpg") top right no-repeat;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Default centering for larger screens */
+}
+
+@media (min-width: 992px) {
+  #hero {
+    padding-left: 160px;
+  }
+}
+
+#hero:before {
+  content: "";
+  background: rgba(255, 255, 255, 0.8);
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+#hero h1 {
+  margin: 0;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 56px;
+  color: var(--iconhover);
+}
+
+#hero p {
+  color: #45505b;
+/*  margin: 15px 0 0 0;*/
+  font-size: 22px;
+/*  font-family: "Poppins", sans-serif;*/
+}
+
+#hero p span {
+  font-weight:600;
+  color: var(--darkGrayBlue);
+  letter-spacing: 1px;
+}
+
+#hero .social-links {
+  margin-top: 0px;
+  margin-left: 10px;
+}
+
+#hero .social-links a {
+  font-size: 24px;
+  display: inline-block;
+  color:#055160;
+  line-height: 1;
+  margin-right: 20px;
+  transition: 0.3s;
+}
+
+#hero .social-links a:hover {
+  color: #d63384;
+}
+
+@media (max-width: 992px) {
+  #hero {
+    text-align: center;
+  }
+
+  #hero h1 {
+    font-size: 32px;
+    line-height: 36px;
+  }
+
+  #hero p {
+    margin-top: 10px;
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+section {
+  padding: 60px 0;
+  overflow: hidden;
+}
+/**/
+.custom-shape-divider-top-1713459113 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-top-1713459113 svg {
+    position: relative;
+    display: block;
+    width: calc(264% + 1.3px);
+    height: 109px;
+}
+
+.custom-shape-divider-top-1713459113 .shape-fill {
+    fill: #31644717;
+}
+
+/** For tablet devices **/
+@media (min-width: 768px) and (max-width: 1023px) {
+    .custom-shape-divider-top-1713459113 svg {
+        width: calc(201% + 1.3px);
+        height: 109px;
+    }
+}
+
+/** For mobile devices **/
+@media (max-width: 767px) {
+    .custom-shape-divider-top-1713459113 svg {
+        width: calc(115% + 1.3px);
+        height: 55px;
+    }
+    #hero {
+    justify-content: flex-end; /* Move container to bottom for mobile devices */
+  }
+
+  #hero .container {
+    padding-bottom: 20px; /* Optional: Add some padding at the bottom */
+  }
+}

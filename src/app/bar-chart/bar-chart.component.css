@@ -1,0 +1,51 @@
+.box{
+    width:80vw;
+    height:80vh;
+}
+.flex-container{
+      display: flex;
+  justify-content: center;
+  align-items: center;
+  height:100vh;
+
+}
+.flex-container > div {
+  background-color: #f1f1f1;
+  color: white;
+  width: 80vw;
+  height: 80vh;
+}
+/* You can adjust or remove these styles as needed */
+.chat-card-container {
+  border-radius: 10px;
+  height: 100%;
+  box-shadow: inset 0 4px 10px rgba(0, 0, 0, 0.2);
+
+}
+
+.row {
+  /* Adjustments to the row height may affect the layout */
+  margin-top: 10px; /* Adjust margin as needed */
+}
+
+.bg-chat-info{
+    background-color: #80deea2b;
+}
+.bg-chat-warning{
+        background-color: #ffc1071f;
+
+}
+.bg-chat-danger{
+        background-color:#ef9a9a42 ;
+
+}
+.card-side{
+    text-align: center;
+     color: var(--bs-tertiary-bg);; /* Change icon color */
+  font-size: 24px;
+
+} 
+.chart-style{
+    width: 60vw;
+    margin: auto;
+}

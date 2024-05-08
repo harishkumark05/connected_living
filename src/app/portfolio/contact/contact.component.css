@@ -1,0 +1,237 @@
+
+/*--------------------------------------------------------------
+# Contact
+--------------------------------------------------------------*/
+ .info {
+  width: 100%;
+/*  background: #fff;*/
+}
+
+.contact .info i {
+  font-size: 20px;
+  color: #316447;
+  float: left;
+  width: 44px;
+  height: 44px;
+  background: #1987545c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  transition: all 0.3s ease-in-out;
+}
+.contact-card {
+  background: #fff;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.contact-item {
+  margin-bottom: 15px;
+}
+
+.contact-item .icon {
+  font-size: 24px;
+  color: #316447;
+  background: #1987545c;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  width: 50px;
+  height: 50px;
+}
+
+.contact-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-detail {
+  text-align: center;
+}
+
+.contact-detail h4 {
+  margin: 0;
+  font-weight: bold;
+}
+
+.contact-detail p {
+  margin: 0;
+  color: #333;
+}
+
+.contact-item a {
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.contact-item a:hover {
+  color: #0056b3;
+}
+
+
+
+/*.contact .info h4 {
+  padding: 0 0 0 60px;
+  font-size: 22px;
+  font-weight: 600;
+  color: #45505b;
+}*/
+
+/*.contact .info p {
+  padding: 0 0 0 60px;
+  margin-bottom: 0;
+  font-size: 14px;
+  color: #728394;
+}
+*/
+/*.contact .info .email,
+.contact .info .phone {
+  margin-top: 40px;
+}
+
+.contact .info .email:hover i,
+.contact .info .address:hover i,
+.contact .info .phone:hover i {
+  background: #316447;
+  color: #fff;
+}*/
+
+
+
+.contact .form-container-email .form-group {
+  padding-bottom: 8px;
+}
+
+.contact .form-container-email .error-message {
+  display: none;
+  color: #fff;
+  background: #ed3c0d;
+  text-align: left;
+  padding: 15px;
+  font-weight: 600;
+}
+
+.contact .form-container-email .error-message br+br {
+  margin-top: 25px;
+}
+
+.contact .form-container-email .sent-message {
+  display: none;
+  color: #fff;
+  background: #18d26e;
+  text-align: center;
+  padding: 15px;
+  font-weight: 600;
+}
+
+.contact .form-container-email .loading {
+  display: none;
+  background: #fff;
+  text-align: center;
+  padding: 15px;
+}
+
+.contact .form-container-email .loading:before {
+  content: "";
+  display: inline-block;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  margin: 0 10px -6px 0;
+  border: 3px solid #18d26e;
+  border-top-color: #eee;
+  animation: animate-loading 1s linear infinite;
+}
+
+.contact .form-container-email input,
+.contact .form-container-email textarea {
+  border-radius: 4px;
+  box-shadow: none;
+  font-size: 14px;
+}
+
+.contact .form-container-email input[type=text],
+.contact .form-container-email input[type=email] {
+  height: 44px;
+}
+
+.contact .form-container-email textarea {
+  padding: 10px 12px;
+}
+
+.contact .form-container-email button[type=submit] {
+  background: #0563bb;
+  border: 0;
+  padding: 10px 35px;
+  color: #fff;
+  transition: 0.4s;
+  border-radius: 50px;
+}
+
+.contact .form-container-email button[type=submit]:hover {
+  background: #0678e3;
+}
+
+/*disabled button*/
+.contact .form-container-email button[type=submit]:disabled {
+  background: #6c757d; /* Adjusted background color for disabled state */
+  cursor: not-allowed; /* Cursor style */
+  opacity: 0.65; 
+
+}
+@keyframes animate-loading {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+a{
+  text-decoration: none;
+}
+
+
+
+/**/
+.text-muted1{
+          --bs-text-opacity: 1;
+  color: var(--iconhover);
+}
+.form-control{
+border-color: #3164478f;
+}
+.form-control:focus{
+          border-color: #31644754;
+        box-shadow: 0 0 0 .14rem #31644754;
+}
+/* Default button styles */
+.btn-custom {
+  background-color: var(--iconhover);
+  color: white;
+  border: none; /* Ensure no default borders interfere */
+}
+
+/* Hover state */
+.btn-custom:hover {
+  color: white;
+  background-color: #316447db;
+}
+
+/* Focus state with pink box-shadow */
+.btn-custom:focus {
+  outline: none; /* Removes the default outline */
+  box-shadow: 0 0 0 3px var(--iconhover); /* Adds a clear pink box-shadow */
+  border: none; /* Keep border styles consistent */
+}
+
+/* Active state (optional) */
+.btn-custom:active {
+  background-color: #244c3b;
+  color: white;
+}

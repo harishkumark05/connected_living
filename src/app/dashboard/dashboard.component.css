@@ -1,0 +1,22 @@
+.home-dashboard-card-container{
+
+        border: none;
+        box-shadow: 0 0.5rem 1rem rgba(0,0,0,.15);
+}
+.home-dashboard-card-body{
+    padding:2rem;
+    background-color: #fff;
+}
+.text-red {
+        color: #d63384!important;
+}
+.bg-red-light {
+        background-color: #f8d7da;
+}
+.home-dashboard-card-footer{
+    padding: 2rem;
+}
+
+.icon-color-not-dynamic{
+        color: #198754;
+}

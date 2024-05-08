@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'connected_living'`, () => {
+  it(`should have as title 'ng-arduino-rabbit'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('connected_living');
+    expect(app.title).toEqual('ng-arduino-rabbit');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('connected_living app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain('ng-arduino-rabbit app is running!');
   });
 });

@@ -1,1 +1,82 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
+
+* {
+  font-family: Open Sans, Arial, sans-serif;
+}
+:root {
+    --primary: #009CFF;
+    --light: #AEC0AF;
+    --dark: #182530;
+    --nav: #FAFAFA;
+    --lightGreen: #8BC140;
+    --iconhover:#316447;
+    --darkGrayBlue:#055160;
+}
+
+/*profile css*/
+section {
+  padding: 10px 0;
+  overflow: hidden;
+  background: radial-gradient(circle at 72% 42%, #e9f0f5 0, #f2f0f4 57%, #f5f5f5 100%);
+}
+
+.section-title {
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.section-title h2 {
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  position: relative;
+  color: #45505b;
+}
+
+.section-title h2::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 120px;
+  height: 1px;
+  background: #ddd;
+  bottom: 1px;
+  left: calc(50% - 60px);
+}
+
+.section-title h2::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 40px;
+  height: 3px;
+  background: var(--bs-info-text-emphasis);
+  bottom: 0;
+  left: calc(50% - 20px);
+}
+
+.section-title p {
+  margin-bottom: 0;
+}
+@media (min-width:768px){
+  .hide-on-large{
+    display:none;
+  }
+  section{
+    min-height:100vh;
+  }
+}
+
+@media (max-width:767px){
+  .hide-on-small{
+    display:none;
+  }
+}
+
+/* Fix for AOS fade-in animation on refresh */
+[data-aos^=fade][data-aos^=fade] {
+        opacity: 1;
+        transition-property: opacity, transform;
+}

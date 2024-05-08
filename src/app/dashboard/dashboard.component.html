@@ -1,0 +1,47 @@
+<section class="container-fluid">
+                <!-- <h3 class="p-2 text-center ">Dashboard</h3> -->
+            <div class="section-title">
+               <h2>Dashboard</h2>   
+              </div>
+              <div *ngIf="isLoading" class="d-flex justify-content-center align-items-center" style="height: 100vh;">
+  <!-- Bootstrap spinner -->
+  <div class="spinner-border icon-color-not-dynamic" role="status">
+    <span class="visually-hidden">Loading...</span>
+    
+  </div>
+</div>
+ <div *ngIf="!isLoading">
+            <div class="row">
+            <div class="mb-4 col-lg-3 col-sm-6 col-md-4 " *ngFor="let item of data | keyvalue">
+              <div class="h-100 home-dashboard-card-container" [routerLink]="['/','project', item.key]">
+                <div class="d-flex align-items-center justify-content-between  home-dashboard-card-body">
+                  <div>
+                   <h4 class="fw-normal text-red">{{item.value}}</h4>
+                   <p class="subtitle text-sm text-muted mb-0">{{getItemSubtitle(item.key)}}</p>
+                  </div>
+                  <div class="ms-3 icon-color-not-dynamic">
+                   <i [ngClass]="getIconString(item.key)"  aria-hidden="true"></i>
+                  </div>
+                </div>
+                <div class="py-3 home-dashboard-card-footer" [ngClass]="getBgColor(item.key, item.value)">
+                    <div class="align-items-center text-light row">
+                      <div class="col-10">
+                        <p class="mb-0">{{item.key |capital}}</p>
+                      </div>
+                      <div class="col-2"></div>
+                    </div>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div>
+          <router-outlet></router-outlet>
+        </div>
+ </div>
+</section>
+<!-- <div class="d-flex justify-content-center">
+  
+    <a routerLink="/arduino" class="btn btn-primary">Dashboard Graph Representation</a>
+  
+</div>
+   -->

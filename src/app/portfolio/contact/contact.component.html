@@ -1,0 +1,117 @@
+<section id="contact" class="contact">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Contact</h2>
+        </div>
+
+        <div class="row mt-1">
+          <div class="col-lg-4">
+  <div class="card contact-card p-3">
+    <div class="contact-item text-center mb-3">
+      <div class="icon">
+        <i class="fa-solid fa-location-dot"></i>
+      </div>
+      <div class="contact-text d-flex justify-content-center mt-2">
+        <div class="contact-detail">
+          <!-- <h4>Location:</h4> -->
+          <p>{{data?.location}}</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-item text-center mb-3">
+      <div class="icon">
+        <i class="fa-regular fa-envelope"></i>
+      </div>
+      <div class="contact-text d-flex justify-content-center mt-2">
+        <div class="contact-detail">
+          <!-- <h4>Email:</h4> -->
+          <p><a href="mailto:${data?.email}">{{data?.email}}</a></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-item text-center">
+      <div class="icon">
+        <i class="fa-solid fa-phone"></i>
+      </div>
+      <div class="contact-text d-flex justify-content-center mt-2">
+        <div class="contact-detail">
+          <!-- <h4>Call:</h4> -->
+          <p><a href="tel:+91${data?.mobile}">+91 {{data?.mobile}}</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="col-lg-8 mt-5 mt-lg-0">
+<div class="card contact-card">
+  <form [formGroup]="formData" (ngSubmit)="sendMessage()" role="form" class="form-container-email info p-2">
+  <div class="row">
+    <div class="col-md-6 form-group">
+      <input type="text" formControlName="name" class="form-control" id="name" placeholder="Your Name">
+      <div *ngIf="formData.get('name')?.invalid && (formData.get('name')?.dirty || formData.get('name')?.touched)">
+        <div *ngIf="formData.get('name')?.errors?.['required']">
+          <p class="text-danger">
+            Name is required.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 form-group mt-3 mt-md-0">
+      <input type="email" formControlName="email" class="form-control" id="email" placeholder="Your Email">
+      <div *ngIf="formData.get('email')?.invalid && (formData.get('email')?.dirty || formData.get('email')?.touched)">
+        <div *ngIf="formData.get('email')?.errors?.['required']">
+          <p class="text-danger">
+            Email is required.
+          </p>
+        </div>
+        <div *ngIf="formData.get('email')?.errors?.['email']">
+          <p class="text-danger">
+            Invalid email format.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="form-group mt-3">
+    <input type="text" formControlName="subject" class="form-control" id="subject" placeholder="Subject">
+    <div *ngIf="formData.get('subject')?.invalid && (formData.get('subject')?.dirty || formData.get('subject')?.touched)">
+      <div *ngIf="formData.get('subject')?.errors?.['required']">
+        <p class="text-danger">
+          Subject is required.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="form-group mt-3">
+    <textarea formControlName="message" class="form-control" rows="5" placeholder="Message"></textarea>
+    <div *ngIf="formData.get('message')?.invalid && (formData.get('message')?.dirty || formData.get('message')?.touched)">
+      <div *ngIf="formData.get('message')?.errors?.['required']">
+        <p class="text-danger">
+          Message is required.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="my-3">
+    <!-- Loading, error message, and sent message placeholders -->
+  </div>
+  <div class="text-center">
+    <button type="submit" [disabled]="formData.invalid">Send Mail</button> <!-- Disable button if form is invalid -->
+  </div>
+  <div *ngIf="emailSentMsg !== ''">
+  <!-- Display something when emailSentMsg is not empty -->
+  <p>{{ emailSentMsg }}</p>
+</div>
+</form>
+
+</div>
+
+</div>
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->

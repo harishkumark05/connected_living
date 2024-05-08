@@ -1,0 +1,90 @@
+<!-- <div>
+  <h2>Login</h2>
+  <form (submit)="onSubmit()">
+    <div>
+      <label for="username">Username:</label>
+      <input type="text" id="username" [(ngModel)]="username" name="username" required>
+    </div>
+    <div>
+      <label for="pin">PIN:</label>
+      <input type="password" id="pin" [(ngModel)]="pin" name="pin" required>
+    </div>
+    <button type="submit">Login</button>
+  </form>
+</div>
+<div *ngIf="errorMessage" class="error-message">
+  {{ errorMessage }}
+</div> -->
+
+<div class="container-fluid vh-100 d-flex flex-column justify-content-center">
+  <div class="row justify-content-center">
+    <div class="col-xxl-4 col-xl-5 col-lg-5 col-md-7 col-sm-9">
+      <!-- Card to contain the form -->
+      <div class="card shadow-lg">
+        <div class="card-body p-5">
+          <h1 class="fs-4 card-title fw-bold mb-4 text-center">Login</h1>
+
+          <!-- Angular form with ngModel bindings -->
+          <form (submit)="onSubmit()" class="needs-validation" novalidate>
+            <div class="mb-3">
+              <label for="username" class="mb-2 text-muted1">Username</label>
+              <input
+                type="email"
+                class="form-control"
+                id="username"
+                [(ngModel)]="username"
+                name="username"
+                autocomplete="username"
+                required
+              />
+              <div class="invalid-feedback">Email is invalid</div>
+            </div>
+
+            <div class="mb-3">
+              <div class="mb-2 w-100">
+                <label class="text-muted1" for="pin">Pin</label>
+              </div>
+              <input
+                type="password"
+                class="form-control"
+                id="pin"
+                [(ngModel)]="pin"
+                name="pin"
+                required
+              />
+              <div class="invalid-feedback">Pin is required</div>
+            </div>
+
+            <div class="d-flex align-items-center">
+              <button type="submit" class="btn btn-custom ms-auto">Login</button>
+            </div>
+          </form>
+
+          <!-- Optional error message display -->
+          <div *ngIf="errorMessage" class="text-danger mt-3">
+            {{ errorMessage }}
+          </div>
+          
+          <!-- Loading indicator -->
+          <div *ngIf="loading" class="text-center mt-4">
+            <div class="spinner-border" role="status">
+              <span class="visually-hidden">Loading...</span>
+            </div>
+            <p class="text-muted1 mt-2">This might take some time as it's a free hosting service. Thank you for your patience.</p>
+          </div>
+        </div>
+
+        <div class="card-footer py-3 border-0 text-center">
+          <p>
+            To Enter As Guest (Access Control Restrictions)
+            
+            <!-- <button class="btn btn-link" >click here</button> -->
+          </p>
+          <p>
+            <a class="link-success link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" (click)="extendedView()"> Click Here</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
