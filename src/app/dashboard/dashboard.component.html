@@ -6,11 +6,15 @@
               <div *ngIf="isLoading" class="d-flex justify-content-center align-items-center" style="height: 100vh;">
   <!-- Bootstrap spinner -->
   <div class="spinner-border icon-color-not-dynamic" role="status">
-    <span class="visually-hidden">Loading...</span>
- 
+    <span class="visually-hidden">Loading...</span> 
   </div>
 </div>
- <div *ngIf="!isLoading">
+     <div *ngIf="!isLoading && !data" class="d-flex justify-content-center align-items-center" style="height: 100vh;">
+  <!-- Bootstrap spinner -->
+   <p class="text-danger  ">Arduino server is turned off.Contact the developer</p>
+</div>
+
+ <div *ngIf="!isLoading && data">
             <div class="row">
             <div class="mb-4 col-lg-3 col-sm-6 col-md-4 " *ngFor="let item of data | keyvalue">
               <div class="h-100 home-dashboard-card-container" [routerLink]="['/','project', item.key]">

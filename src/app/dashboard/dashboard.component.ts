@@ -14,6 +14,7 @@ export class DashboardComponent {
  data:any;
    isLoading:boolean = true;
    private socketSubscription :any;
+   timeoutId: any;  // Holds the ID for the timeout
   constructor(private router:Router, private socketService: SocketService){
 this.router.events.pipe(
       filter(event => event instanceof NavigationEnd)
@@ -30,17 +31,26 @@ this.router.events.pipe(
     //   this.isLoading = false;
     // })
              this.subscribeToSocket();
+             this.startTimeout();
 
-console.log('Home component')
+// console.log('Home component')
        
   }
 subscribeToSocket(){
-  this.socketSubscription = this.socketService.on('broadcastEvent').subscribe((data: string) => {
+  this.socketSubscription = this.socketService
+  .on('broadcastEvent')
+  .subscribe((data: string) => {
+      clearTimeout(this.timeoutId);  // Clear the timeout since data was received
       this.data = JSON.parse(data); 
             this.isLoading = false;
     });
 }
-
+ startTimeout() {
+    this.timeoutId = setTimeout(() => {
+      this.isLoading = false;  // No longer loading
+      this.data = null;  // Reset data
+    }, 10000);  // Timeout set to 5 seconds (adjust as needed)
+  }
     getItemSubtitle(key:any):any{
       if(key === 'temperature'){
         return "Degree in C"
@@ -104,5 +114,6 @@ subscribeToSocket(){
 
     ngOnDestroy(){
       this.socketSubscription.unsubscribe();
+      clearTimeout(this.timeoutId);  // Clear the timeout on component destruction
     }
 }
