@@ -1,7 +1,4 @@
 
-/*--------------------------------------------------------------
-# Contact
---------------------------------------------------------------*/
  .info {
   width: 100%;
 /*  background: #fff;*/
@@ -71,35 +68,6 @@
 .contact-item a:hover {
   color: #0056b3;
 }
-
-
-
-/*.contact .info h4 {
-  padding: 0 0 0 60px;
-  font-size: 22px;
-  font-weight: 600;
-  color: #45505b;
-}*/
-
-/*.contact .info p {
-  padding: 0 0 0 60px;
-  margin-bottom: 0;
-  font-size: 14px;
-  color: #728394;
-}
-*/
-/*.contact .info .email,
-.contact .info .phone {
-  margin-top: 40px;
-}
-
-.contact .info .email:hover i,
-.contact .info .address:hover i,
-.contact .info .phone:hover i {
-  background: #316447;
-  color: #fff;
-}*/
-
 
 
 .contact .form-container-email .form-group {

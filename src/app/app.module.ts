@@ -4,6 +4,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import {HttpClientModule} from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFireAnalyticsModule } from '@angular/fire/compat/analytics';
+import { environment } from '../environments/environment';
 
 import { SocketService } from './service/socket.service';
 import {NodeDataService} from './service/node-data.service';
@@ -39,7 +42,9 @@ import { SharedModule } from './shared/shared.module';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    SharedModule, 
+    SharedModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireAnalyticsModule, // Ensure Firebase Analytics is included
   
   ],
   providers: [
