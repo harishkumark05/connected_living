@@ -1,27 +1,23 @@
-# ConnectedLiving
+# Angular Sensor Monitoring App
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.3.
+This Angular application serves as the frontend for a sensor data monitoring system. It communicates with the backend server to display real-time sensor data and provides user authentication features.
 
-## Development server
+## Features
+- Displays real-time sensor data from the backend server.
+- Utilizes Chart.js to visualize sensor data trends with interactive charts.
+- Implements Animate on Scroll (AOS) for smooth animations while scrolling.
+- Integrates Socket.IO for real-time communication with the backend server.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
+# Components and Services
+- `sensor-data.component`: Component responsible for displaying real-time sensor data.
+- `authentication.service`: Service for handling user authentication and JWT token management.
+- `chart.component`: Component for rendering interactive charts using Chart.js.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Dependencies Used
+- Angular: Frontend framework for building web applications.
+- Angular Material: UI component library for Angular applications.
+- RxJS: Library for reactive programming using Observables.
+- Chart.js: Library for creating interactive charts.
+- AOS: Library for animating elements on scroll.
+- Socket.IO: Library for real-time, bidirectional communication between web clients and servers.
